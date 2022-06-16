@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>James Bennett's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/my_portfolio.css">
+
+</head>
+
+<!--Body-->
+<body class="Background"></body>
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <br>
+    <br>
+    <!--Possible Breaks needed here, will look back later!!-->
+
+    <!--Background Video-->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="./video/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 Video.
+        </video>
+    </div>
+    
+    <!--Video Text-->
+
+    <div class="Video_text">
+        <h1 class="white-text">James Bennett's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q></q>
+                <br>My name is James Bennett. This is temp text to explain the webpage.
+                <br>
+                <br>Thank you for visiting my webpage, please enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!--About Section-->
+    <div class="row" id="About">
+        <!--Left Column-->
+        <div class="column_2">
+            <img class="img_wide" src="./images/nature_tech2.jpeg">
+        </div>
+        <!--Right Column-->
+        <div class="column_1">
+            <h1>About</h1>
+            <p>I am an entry level developer who loves video games, sports, and the outdoors. 
+            <br>
+            <br>I am a student at <a href="https://www.learndodinganywhere.com" target="_blank">The Tech Academy</a> currently training and learning the following web and programming languages:
+                HTML, CSS, JavaScript, C# and .net, as well as CSS and potentially many more. 
+            <br>
+            <br>I am a full stack developer with a strong passion to create something others will enjoy, and would love to work with you on your project! <a href="#Contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub Section-->
+    <div class="row" id="GitHub">
+        <!--Left Column-->
+        <div class="column_1">
+            <h1>GitHub</h1>
+            <p>You can view my coding projects and current progress on my <a href="https://github.com/Jamesmb7" target="_blank">GitHub</a> profile here. You could also click the Image to take you to my page.
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="column_2">
+            <a href="https://github.com/Jamesmb7" target="_blank"><img src="./images/GitHub.png"></a>
+        </div>
+    </div>
+
+    <!--Contact Section-->
+    <div class="row" id="Contact">
+        <!--Left Column-->
+        <div class="column_2 column_tall">
+            <img class="img_wide" src="./images/nature_tech.jpeg" alt="Computer in Nature">
+        </div>
+        <!--Right Column-->
+        <div class="column_1 column_tall">
+            <h1>Contact</h1> 
+            <form action="" method="POST">
+                <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enter email  here">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please enter message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="center">&copy James Bennett's Portfolio., <a href="https://github.com/Jamesmb7" target="_blank">James Bennett's GitHub</a></p>
+    </footer>
+
+</body>
+</html>
