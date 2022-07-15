@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>James Bennett's Portfolio</title>
+    <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
     <link rel="stylesheet" type="text/css" href="./css/my_portfolio.css">
 
 </head>
@@ -15,34 +16,91 @@
     <!--Navbar-->
     <div class="Navbar">
         <a class="active" href="#home">Home</a>
+        <!-- New Section Added Here -->
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <!-- Onclick and ondblclick function added to open and close the contact form -->
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </div>
-    <br>
-    <br>
     <!--Possible Breaks needed here, will look back later!!-->
-
     <!--Background Video-->
     <div id="Home">
         <video autoplay muted loop id="Typing_Video">
             <source src="./video/video/Typing.mp4" type="video/mp4">
+            <!-- Display message if the video fails to run -->
             Your browser does not support HTML5 Video.
         </video>
     </div>
     
     <!--Video Text-->
-
     <div class="Video_text">
         <h1 class="white-text">James Bennett's Portfolio</h1>
         <strong>
-            <p class="center_text">
-                <q></q>
-                <br>My name is James Bennett. This is temp text to explain the webpage.
+            <p class="center">
+                <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                    <br>field of battle and to command such unswervingly dutiful actors or troops.
+                </q>
+                <br> -Joseph Weizenbaum<br>
+                <br>
+                My name is James Bennett. Welcome to my portfolio website. On it, I will tell you about my background and experience. 
                 <br>
                 <br>Thank you for visiting my webpage, please enjoy!
             </p>
         </strong>
+    </div>
+
+    <!-- Slideshow Section Added -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/baseball1.webp" alt="Picture of yourself">
+                    <div class="text"> I'm available to assist you on your project!</div>
+                </div>
+                <!-- Slide 2 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                    <div class="text"> I am a full-stack software developer,<br> trained in:<br> HTML, CSS, JavaScript,</div>
+                </div>
+                <!-- Slide 3 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/Python.png" alt="Python logo">
+                    <div class="text"> the popular programming language Python,</div>
+                </div>
+                <!-- Slide 4 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                    <div class="text"> C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+                <!-- Slide 5 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/SQL_and_Database(1).jpg" alt="SQL logo">
+                    <div class="text"> back end development, databases and SQL.</div>
+                </div>
+                <!-- Slide 6 of 6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./images/nature_tech.jpeg" alt="Replace with a picture of your choosing">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a> </div>
+                </div>
+                <!-- Previous and Next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- Adds a space between the slideshow images and the dots -->
+
+            <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
     </div>
 
     <!--About Section-->
@@ -59,7 +117,7 @@
             <br>I am a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> currently training and learning the following web and programming languages:
                 HTML, CSS, JavaScript, C# and .net, as well as CSS and potentially many more. 
             <br>
-            <br>I am a full stack developer with a strong passion to create something others will enjoy, and would love to work with you on your project! <a href="#Contact">Contact</a> me below!
+            <br>I am a full stack developer with a strong passion to create something others will enjoy, and would love to work with you on your project! <a onclick="openForm()" class="contact">Contact</a> me below!
             </p>
         </div>
     </div>
@@ -69,7 +127,9 @@
         <!--Left Column-->
         <div class="column_1">
             <h1>GitHub</h1>
-            <p>You can view my coding projects and current progress on my <a href="https://github.com/Jamesmb7" target="_blank">GitHub</a> profile here. You could also click the Image to take you to my page.
+            <p>You can view my coding projects and current progress on my GitHub profile here:
+                <br>
+                <p class="center"><a href="https://github.com/Jamesmb7" target="_blank">My Current Github</a></p>
             </p>
         </div>
         <!--Right Column-->
@@ -78,30 +138,30 @@
         </div>
     </div>
 
-    <!--Contact Section-->
-    <div class="row" id="Contact">
-        <!--Left Column-->
-        <div class="column_2 column_tall">
-            <img class="img_wide" src="./images/nature_tech.jpeg" alt="Computer in Nature">
+    <!--Contact form -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/xbjwbbgr" method="POST"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                 <h1>Contact</h1>
+                 <label for="name"><b>Name</b></label>
+                   <input type="text" placeholder="Type your name here" name="name" required>
+                 <label for="phone"><b>Phone</b></label>
+                   <input type="text" placeholder="Type your phone number here" name="phone">
+                 <label for="email"><b>Email</b></label>		
+                   <input type="text" placeholder="Type your email address here" name="email" required>
+                 <label for="message"><b>Message</b></label>
+                   <input type="text" placeholder="Type your message here" name="message">
+      
+                 <button type="submit" class="btn">SUBMIT</button>
+                 <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+             </form>
         </div>
-        <!--Right Column-->
-        <div class="column_1 column_tall">
-            <h1>Contact</h1> 
-            <form action="https://formspree.io/f/xbjwbbgr" method="POST">
-                <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
-                <label>Email:</label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter email here">
-                <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please enter message here">
-                    <input type="submit" value="SUBMIT">
-            </form>
-        </div>
-    </div>
+     </div>
 
     <footer>
         <p class="center">&copy James Bennett's Portfolio., <a href="https://github.com/Jamesmb7" target="_blank">James Bennett's GitHub</a></p>
     </footer>
-
+    <script src="./JS/my_portfolio.js"></script>
 </body>
 </html>
